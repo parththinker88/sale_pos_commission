@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+
+		<record id="invoice_sale_commission_tree_view" model="ir.ui.view">
+			<field name="name">invoice.sale.commission.inherit</field>
+			<field name="model">invoice.sale.commission</field>
+			<field name="inherit_id" ref="sales_commission.invoice_sale_commission_tree_view"/>
+			<field name="arch" type="xml">
+				<field name="order_id" position="after">
+					<field name="pos_order_id"/>
+				</field>
+			</field>
+		</record>
+
+		<record id="invoice_sale_commission_form1_view" model="ir.ui.view">
+			<field name="name">invoice.sale.commission.inherit</field>
+			<field name="model">invoice.sale.commission</field>
+			<field name="inherit_id" ref="sales_commission.invoice_sale_commission_form1_view"/>
+			<field name="arch" type="xml">
+				<field name="order_id" position="after">
+					<field name="pos_order_id"/>
+				</field>
+			</field>
+		</record>
+
+		<record id="invoice_sale_commission_search" model="ir.ui.view">
+			<field name="name">invoice.sale.commission.search</field>
+			<field name="model">invoice.sale.commission</field>
+			<field name="inherit_id" ref="sales_commission.invoice_sale_commission_search"/>
+			<field name="arch" type="xml">
+				<field name="invoice_id" position="after">
+					<field name="pos_order_id"/>
+				</field>
+			</field>
+		</record>
+		
+	</data>
+</odoo>

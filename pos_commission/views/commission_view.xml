@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+		<record id="sale_commission_tree_view" model="ir.ui.view">
+			<field name="name">commission.rule.tree</field>
+			<field name="model">commission.rule</field>
+			<field name="inherit_id" ref="sales_commission.sale_commission_tree_view"/>
+			<field name="arch" type="xml">
+				<field name="is_sale_commission" position="after">
+					<field name="is_pos_commission"/>
+				</field>
+			</field>
+		</record>
+
+		<record id="sale_commission_form_view" model="ir.ui.view">
+			<field name="name">commission.rule.form</field>
+			<field name="model">commission.rule</field>
+			<field name="inherit_id" ref="sales_commission.sale_commission_form_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//sheet/div[hasclass('oe_title')]" position="inside">
+					<div>
+						<field name="is_pos_commission"/>
+						<label for="is_pos_commission"/>
+					</div>
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

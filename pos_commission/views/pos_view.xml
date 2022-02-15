@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_pos_pos_form_inherit_bi" model="ir.ui.view">
+        <field name="name">view.pos.pos.form.inherit.bi</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form" />
+        <field name="arch" type="xml">
+            <field name="fiscal_position_id" position="after">
+                <field name="is_pos_commission_create" readonly="1" invisible="1"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>
